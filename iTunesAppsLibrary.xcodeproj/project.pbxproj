@@ -361,6 +361,7 @@
 				A0DFCA931E6205C000DFB022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
