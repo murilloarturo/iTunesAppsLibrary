@@ -50,8 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupNavigationFlow() {
         
         setupWindow()
-        let categoriesViewController = CategoriesViewController()
-        self.window?.rootViewController = categoriesViewController
+        let baseCoordinator = BaseCoordinator(window: self.window!)
+        baseCoordinator.start()
         self.window?.makeKeyAndVisible()
     }
     
