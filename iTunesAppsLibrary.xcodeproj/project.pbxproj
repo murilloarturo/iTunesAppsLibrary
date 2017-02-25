@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */; };
-		A0DFCA821E6205C000DFB022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA811E6205C000DFB022 /* ViewController.swift */; };
 		A0DFCA881E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */; };
 		A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA891E6205C000DFB022 /* Assets.xcassets */; };
 		A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA8B1E6205C000DFB022 /* LaunchScreen.storyboard */; };
+		A0DFCAA81E620E9B00DFB022 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */; };
+		A0DFCAA91E620E9B00DFB022 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A0DFCA7C1E6205C000DFB022 /* iTunesAppsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAppsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0DFCA811E6205C000DFB022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAppsLibrary.xcdatamodel; sourceTree = "<group>"; };
 		A0DFCA891E6205C000DFB022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0DFCA8C1E6205C000DFB022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0DFCA8E1E6205C000DFB022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,79 @@
 		A0DFCA7E1E6205C000DFB022 /* iTunesAppsLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A0DFCA951E62099B00DFB022 /* Application */,
+				A0DFCA941E62097700DFB022 /* Supporting Files */,
 				A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */,
-				A0DFCA811E6205C000DFB022 /* ViewController.swift */,
-				A0DFCA891E6205C000DFB022 /* Assets.xcassets */,
 				A0DFCA8B1E6205C000DFB022 /* LaunchScreen.storyboard */,
-				A0DFCA8E1E6205C000DFB022 /* Info.plist */,
-				A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */,
 			);
 			path = iTunesAppsLibrary;
+			sourceTree = "<group>";
+		};
+		A0DFCA941E62097700DFB022 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFCA891E6205C000DFB022 /* Assets.xcassets */,
+				A0DFCA8E1E6205C000DFB022 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0DFCA951E62099B00DFB022 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFCA961E6209A800DFB022 /* API */,
+				A0DFCA981E6209D400DFB022 /* Model */,
+				A0DFCAA31E620E0C00DFB022 /* ViewModel */,
+				A0DFCAA21E620DF800DFB022 /* View */,
+				A0DFCAA41E620E4100DFB022 /* Utils */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A0DFCA961E6209A800DFB022 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A0DFCA981E6209D400DFB022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0DFCAA21E620DF800DFB022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFCAA51E620E8400DFB022 /* Categories */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0DFCAA31E620E0C00DFB022 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A0DFCAA41E620E4100DFB022 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0DFCAA51E620E8400DFB022 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */,
+				A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +192,7 @@
 			files = (
 				A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */,
 				A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */,
+				A0DFCAA91E620E9B00DFB022 /* CategoriesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0DFCA821E6205C000DFB022 /* ViewController.swift in Sources */,
 				A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */,
 				A0DFCA881E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld in Sources */,
+				A0DFCAA81E620E9B00DFB022 /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AM.iTunesAppsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -265,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AM.iTunesAppsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,7 +371,8 @@
 				A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */,
 			);
 			currentVersion = A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */;
-			path = iTunesAppsLibrary.xcdatamodeld;
+			name = iTunesAppsLibrary.xcdatamodeld;
+			path = ../../iTunesAppsLibrary.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
