@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ABB20334F59B5393C56EC63 /* Pods_iTunesAppsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */; };
 		A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */; };
 		A0DFCA881E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */; };
 		A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA891E6205C000DFB022 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730159D4D0867BBFE3E5A07A /* Pods-iTunesAppsLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAppsLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAppsLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		A0DFCA7C1E6205C000DFB022 /* iTunesAppsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAppsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAppsLibrary.xcdatamodel; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		A0DFCA8E1E6205C000DFB022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAppsLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABB20334F59B5393C56EC63 /* Pods_iTunesAppsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		332ED37F17C607B8EC842516 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0DFCA731E6205C000DFB022 = {
 			isa = PBXGroup;
 			children = (
 				A0DFCA7E1E6205C000DFB022 /* iTunesAppsLibrary */,
 				A0DFCA7D1E6205C000DFB022 /* Products */,
+				FD486AAF3D363268718290E8 /* Pods */,
+				332ED37F17C607B8EC842516 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +146,15 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		FD486AAF3D363268718290E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */,
+				730159D4D0867BBFE3E5A07A /* Pods-iTunesAppsLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0DFCA911E6205C000DFB022 /* Build configuration list for PBXNativeTarget "iTunesAppsLibrary" */;
 			buildPhases = (
+				C4744C5AB39590266C49DDAF /* [CP] Check Pods Manifest.lock */,
 				A0DFCA781E6205C000DFB022 /* Sources */,
 				A0DFCA791E6205C000DFB022 /* Frameworks */,
 				A0DFCA7A1E6205C000DFB022 /* Resources */,
+				171BB6B45317A1A6DBB1FF9C /* [CP] Embed Pods Frameworks */,
+				AD2F5BACEA353AAA9D683AF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +224,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171BB6B45317A1A6DBB1FF9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2F5BACEA353AAA9D683AF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4744C5AB39590266C49DDAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0DFCA781E6205C000DFB022 /* Sources */ = {
@@ -318,6 +393,7 @@
 		};
 		A0DFCA921E6205C000DFB022 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
@@ -331,6 +407,7 @@
 		};
 		A0DFCA931E6205C000DFB022 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 730159D4D0867BBFE3E5A07A /* Pods-iTunesAppsLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
