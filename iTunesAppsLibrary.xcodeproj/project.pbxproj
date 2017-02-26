@@ -10,13 +10,23 @@
 		6ABB20334F59B5393C56EC63 /* Pods_iTunesAppsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */; };
 		A06655C91E62382A008D1BB0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655C81E62382A008D1BB0 /* Coordinator.swift */; };
 		A06655CB1E623841008D1BB0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */; };
-		A06655CD1E623884008D1BB0 /* CategoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655CC1E623884008D1BB0 /* CategoriesCoordinator.swift */; };
+		A06655CD1E623884008D1BB0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */; };
+		A06655D81E624322008D1BB0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655D71E624322008D1BB0 /* Storage.swift */; };
+		A06655DA1E62447B008D1BB0 /* ApplicationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655D91E62447B008D1BB0 /* ApplicationAPI.swift */; };
+		A06655DE1E624594008D1BB0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655DD1E624594008D1BB0 /* Router.swift */; };
+		A06655E21E625E66008D1BB0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655E11E625E66008D1BB0 /* Application.swift */; };
+		A06655E41E62618F008D1BB0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655E31E62618F008D1BB0 /* Image.swift */; };
+		A06655E61E6261FC008D1BB0 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655E51E6261FC008D1BB0 /* Price.swift */; };
+		A06655E81E62631C008D1BB0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655E71E62631C008D1BB0 /* Category.swift */; };
+		A06655ED1E626CF6008D1BB0 /* ApplicationServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655EC1E626CF6008D1BB0 /* ApplicationServer.swift */; };
+		A06655EF1E62709B008D1BB0 /* ApplicationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655EE1E62709B008D1BB0 /* ApplicationStorage.swift */; };
+		A06655F21E628981008D1BB0 /* ApplicationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */; };
+		A06655F61E6289A6008D1BB0 /* ApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */; };
+		A06655F71E6289A6008D1BB0 /* ApplicationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */; };
+		A06655F91E628A97008D1BB0 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */; };
 		A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */; };
-		A0DFCA881E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */; };
 		A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA891E6205C000DFB022 /* Assets.xcassets */; };
 		A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA8B1E6205C000DFB022 /* LaunchScreen.storyboard */; };
-		A0DFCAA81E620E9B00DFB022 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */; };
-		A0DFCAA91E620E9B00DFB022 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,15 +34,25 @@
 		8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAppsLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		A06655C81E62382A008D1BB0 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		A06655CC1E623884008D1BB0 /* CategoriesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCoordinator.swift; sourceTree = "<group>"; };
+		A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		A06655D71E624322008D1BB0 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		A06655D91E62447B008D1BB0 /* ApplicationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAPI.swift; sourceTree = "<group>"; };
+		A06655DD1E624594008D1BB0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = ../Router.swift; sourceTree = "<group>"; };
+		A06655E11E625E66008D1BB0 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A06655E31E62618F008D1BB0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		A06655E51E6261FC008D1BB0 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		A06655E71E62631C008D1BB0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A06655EC1E626CF6008D1BB0 /* ApplicationServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServer.swift; sourceTree = "<group>"; };
+		A06655EE1E62709B008D1BB0 /* ApplicationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
+		A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListViewModel.swift; sourceTree = "<group>"; };
+		A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
+		A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationListViewController.xib; sourceTree = "<group>"; };
+		A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
 		A0DFCA7C1E6205C000DFB022 /* iTunesAppsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAppsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesAppsLibrary.xcdatamodel; sourceTree = "<group>"; };
 		A0DFCA891E6205C000DFB022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0DFCA8C1E6205C000DFB022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0DFCA8E1E6205C000DFB022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAppsLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,21 +81,50 @@
 			children = (
 				A06655C81E62382A008D1BB0 /* Coordinator.swift */,
 				A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */,
-				A06655CC1E623884008D1BB0 /* CategoriesCoordinator.swift */,
+				A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		A06655CE1E6238B6008D1BB0 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		A06655CF1E623A72008D1BB0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */,
+				A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A06655D41E6242C5008D1BB0 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				A06655DD1E624594008D1BB0 /* Router.swift */,
+				A06655EC1E626CF6008D1BB0 /* ApplicationServer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		A06655D61E6242EE008D1BB0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A06655D71E624322008D1BB0 /* Storage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A06655E91E626CAB008D1BB0 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A06655EE1E62709B008D1BB0 /* ApplicationStorage.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		A06655F01E628963008D1BB0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */,
+				A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -133,6 +182,9 @@
 		A0DFCA961E6209A800DFB022 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A06655D91E62447B008D1BB0 /* ApplicationAPI.swift */,
+				A06655D41E6242C5008D1BB0 /* Server */,
+				A06655E91E626CAB008D1BB0 /* Local */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -140,7 +192,10 @@
 		A0DFCA981E6209D400DFB022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */,
+				A06655E11E625E66008D1BB0 /* Application.swift */,
+				A06655E31E62618F008D1BB0 /* Image.swift */,
+				A06655E51E6261FC008D1BB0 /* Price.swift */,
+				A06655E71E62631C008D1BB0 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,7 +213,7 @@
 		A0DFCAA31E620E0C00DFB022 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A06655CE1E6238B6008D1BB0 /* Categories */,
+				A06655F01E628963008D1BB0 /* Application */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +221,7 @@
 		A0DFCAA41E620E4100DFB022 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A06655D61E6242EE008D1BB0 /* CoreData */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,8 +229,6 @@
 		A0DFCAA51E620E8400DFB022 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				A0DFCAA61E620E9B00DFB022 /* CategoriesViewController.swift */,
-				A0DFCAA71E620E9B00DFB022 /* CategoriesViewController.xib */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -252,7 +306,7 @@
 			files = (
 				A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */,
 				A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */,
-				A0DFCAA91E620E9B00DFB022 /* CategoriesViewController.xib in Resources */,
+				A06655F71E6289A6008D1BB0 /* ApplicationListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,10 +367,20 @@
 			files = (
 				A06655CB1E623841008D1BB0 /* BaseCoordinator.swift in Sources */,
 				A06655C91E62382A008D1BB0 /* Coordinator.swift in Sources */,
+				A06655E21E625E66008D1BB0 /* Application.swift in Sources */,
+				A06655DE1E624594008D1BB0 /* Router.swift in Sources */,
 				A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */,
-				A0DFCA881E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld in Sources */,
-				A06655CD1E623884008D1BB0 /* CategoriesCoordinator.swift in Sources */,
-				A0DFCAA81E620E9B00DFB022 /* CategoriesViewController.swift in Sources */,
+				A06655F61E6289A6008D1BB0 /* ApplicationListViewController.swift in Sources */,
+				A06655F21E628981008D1BB0 /* ApplicationListViewModel.swift in Sources */,
+				A06655E61E6261FC008D1BB0 /* Price.swift in Sources */,
+				A06655D81E624322008D1BB0 /* Storage.swift in Sources */,
+				A06655ED1E626CF6008D1BB0 /* ApplicationServer.swift in Sources */,
+				A06655EF1E62709B008D1BB0 /* ApplicationStorage.swift in Sources */,
+				A06655CD1E623884008D1BB0 /* ApplicationCoordinator.swift in Sources */,
+				A06655F91E628A97008D1BB0 /* ApplicationViewModel.swift in Sources */,
+				A06655E81E62631C008D1BB0 /* Category.swift in Sources */,
+				A06655DA1E62447B008D1BB0 /* ApplicationAPI.swift in Sources */,
+				A06655E41E62618F008D1BB0 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,20 +543,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A0DFCA861E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */,
-			);
-			currentVersion = A0DFCA871E6205C000DFB022 /* iTunesAppsLibrary.xcdatamodel */;
-			name = iTunesAppsLibrary.xcdatamodeld;
-			path = ../../iTunesAppsLibrary.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A0DFCA741E6205C000DFB022 /* Project object */;
 }

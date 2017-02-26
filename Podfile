@@ -9,6 +9,13 @@ target 'iTunesAppsLibrary' do
     pod 'AlamofireObjectMapper'
     pod 'AlamofireImage', '~> 3.1'
     pod 'SVProgressHUD'
+    pod 'RealmSwift'
+    pod "ObjectMapper+Realm"
+
+    #RxSwift
+    pod 'RxSwift',    '~> 3.0'
+    pod 'RxCocoa',    '~> 3.0'
+    pod 'RxBlocking', '~> 3.0'
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|

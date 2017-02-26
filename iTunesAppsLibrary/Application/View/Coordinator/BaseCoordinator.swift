@@ -35,9 +35,9 @@ class BaseCoordinator: Coordinator {
     //MARK: - Utils
     private func showHome() {
         
-        let categoriesCoordinator = CategoriesCoordinator()
-        coordinators[categoriesCoordinator.name] = categoriesCoordinator
-        window.rootViewController = categoriesCoordinator.rootViewController
-        categoriesCoordinator.start()
+        let applicationCoordinator = ApplicationCoordinator()
+        coordinators[applicationCoordinator.name] = applicationCoordinator
+        window.rootViewController = applicationCoordinator.rootViewController
+        applicationCoordinator.start()
     }
 }
