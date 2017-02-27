@@ -52,7 +52,7 @@ class ApplicationViewController: UIViewController {
     }
     
     @IBAction func linkButtonTapped(_ sender: Any) {
-        if let imageURLString = viewModel.applicationImage(), let url = URL(string: imageURLString) {
+        if let imageURLString = viewModel.applicationLink(), let url = URL(string: imageURLString) {
             UIApplication.shared.openURL(url)
         }
     }

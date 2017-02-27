@@ -79,7 +79,7 @@ class ApplicationListViewModel {
             return ("", "")
         }
         let application = applications[indexPath.row]
-        return (application.name, application.image?.thumbnailURLString)
+        return (application.name, application.image?.imageURLString)
     }
     
     func allCategoriesName() -> [String] {

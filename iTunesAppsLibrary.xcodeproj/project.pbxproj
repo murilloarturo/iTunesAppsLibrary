@@ -32,6 +32,7 @@
 		A06655FC1E638A3F008D1BB0 /* ApplicationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655FA1E638A3E008D1BB0 /* ApplicationCollectionViewCell.swift */; };
 		A06655FD1E638A3F008D1BB0 /* ApplicationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06655FB1E638A3E008D1BB0 /* ApplicationCollectionViewCell.xib */; };
 		A06656001E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655FF1E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift */; };
+		A092689D1E64AD3A00945016 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092689C1E64AD3A00945016 /* Reachability.swift */; };
 		A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */; };
 		A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA891E6205C000DFB022 /* Assets.xcassets */; };
 		A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA8B1E6205C000DFB022 /* LaunchScreen.storyboard */; };
@@ -47,7 +48,7 @@
 		A0342D731E63EC6A0044213E /* ApplicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationViewController.xib; sourceTree = "<group>"; };
 		A0389B231E64932E0053B582 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A0389B241E64932E0053B582 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		A0389B271E649A9E0053B582 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		A0389B271E649A9E0053B582 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewModel.swift; path = Application/SplashViewModel.swift; sourceTree = "<group>"; };
 		A06655C81E62382A008D1BB0 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -59,13 +60,14 @@
 		A06655E71E62631C008D1BB0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A06655EC1E626CF6008D1BB0 /* ApplicationServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationServer.swift; sourceTree = "<group>"; };
 		A06655EE1E62709B008D1BB0 /* ApplicationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStorage.swift; sourceTree = "<group>"; };
-		A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListViewModel.swift; sourceTree = "<group>"; };
+		A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationListViewModel.swift; path = Application/ApplicationListViewModel.swift; sourceTree = "<group>"; };
 		A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
 		A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationListViewController.xib; sourceTree = "<group>"; };
-		A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
+		A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationViewModel.swift; path = Application/ApplicationViewModel.swift; sourceTree = "<group>"; };
 		A06655FA1E638A3E008D1BB0 /* ApplicationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCollectionViewCell.swift; sourceTree = "<group>"; };
 		A06655FB1E638A3E008D1BB0 /* ApplicationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationCollectionViewCell.xib; sourceTree = "<group>"; };
 		A06655FF1E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Registrable.swift"; sourceTree = "<group>"; };
+		A092689C1E64AD3A00945016 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		A0DFCA7C1E6205C000DFB022 /* iTunesAppsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAppsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DFCA891E6205C000DFB022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,16 +153,6 @@
 				A06655EE1E62709B008D1BB0 /* ApplicationStorage.swift */,
 			);
 			path = Local;
-			sourceTree = "<group>";
-		};
-		A06655F01E628963008D1BB0 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */,
-				A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */,
-				A0389B271E649A9E0053B582 /* SplashViewModel.swift */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 		A06655FE1E638B5F008D1BB0 /* Extensions */ = {
@@ -252,7 +244,9 @@
 		A0DFCAA31E620E0C00DFB022 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A06655F01E628963008D1BB0 /* Application */,
+				A06655F11E628981008D1BB0 /* ApplicationListViewModel.swift */,
+				A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */,
+				A0389B271E649A9E0053B582 /* SplashViewModel.swift */,
 			);
 			name = ViewModel;
 			path = Application/ViewModel;
@@ -263,6 +257,7 @@
 			children = (
 				A02C7C281E63BF4600BBE94E /* Resources */,
 				A06655FE1E638B5F008D1BB0 /* Extensions */,
+				A092689C1E64AD3A00945016 /* Reachability.swift */,
 			);
 			name = Utils;
 			path = Application/Utils;
@@ -417,6 +412,7 @@
 				A06655F21E628981008D1BB0 /* ApplicationListViewModel.swift in Sources */,
 				A06655E61E6261FC008D1BB0 /* Price.swift in Sources */,
 				A06656001E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift in Sources */,
+				A092689D1E64AD3A00945016 /* Reachability.swift in Sources */,
 				A06655ED1E626CF6008D1BB0 /* ApplicationServer.swift in Sources */,
 				A06655EF1E62709B008D1BB0 /* ApplicationStorage.swift in Sources */,
 				A06655CD1E623884008D1BB0 /* ApplicationCoordinator.swift in Sources */,
@@ -541,6 +537,7 @@
 			baseConfigurationReference = 8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -556,6 +553,7 @@
 			baseConfigurationReference = 730159D4D0867BBFE3E5A07A /* Pods-iTunesAppsLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iTunesAppsLibrary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

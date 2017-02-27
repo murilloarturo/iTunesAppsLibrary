@@ -14,9 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private var baseCoordinator: BaseCoordinator!
+    private var reachabilityListener = Reachability()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupNavigationFlow()
+        reachabilityListener.listenForReachability()
         
         return true
     }

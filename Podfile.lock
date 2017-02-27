@@ -6,6 +6,8 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
   - AZDropdownMenu (1.1.2)
+  - BRYXBanner (0.7.1)
+  - DZNEmptyDataSet (1.8.1)
   - ObjectMapper (2.2.4)
   - ObjectMapper+Realm (0.2):
     - ObjectMapper
@@ -28,6 +30,8 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.1)
   - AlamofireObjectMapper
   - AZDropdownMenu
+  - BRYXBanner
+  - DZNEmptyDataSet
   - ObjectMapper+Realm
   - RealmSwift
   - RxBlocking (~> 3.0)
@@ -41,6 +45,8 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   AZDropdownMenu: 411c1b445fd29bb1e56b219131aaf294ba21b9b6
+  BRYXBanner: 34eabf9c6c009f187948ca78a4f3bba3767d0f04
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   ObjectMapper: 81d0e5d7c57129e3e93f29a04bdf9669542b37d2
   ObjectMapper+Realm: 8b45dbfa1be145e311a6f93a306c183d630b40a9
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
@@ -51,6 +57,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TTZoomTransition: 4dc6a07eac1e4f2c3cd0010a1b43c06e5b107377
 
-PODFILE CHECKSUM: 773214ca88304f165723d445b4d94ef0c1865740
+PODFILE CHECKSUM: e14e1786d7c142e7ac60af247ae768a5605cb872
 
 COCOAPODS: 1.2.0

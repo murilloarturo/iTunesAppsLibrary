@@ -13,6 +13,8 @@ target 'iTunesAppsLibrary' do
     pod "ObjectMapper+Realm"
     pod 'AZDropdownMenu'
     pod 'TTZoomTransition'
+    pod 'BRYXBanner'
+    pod 'DZNEmptyDataSet'
 
     #RxSwift
     pod 'RxSwift',    '~> 3.0'

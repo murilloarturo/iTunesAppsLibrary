@@ -19,10 +19,8 @@ struct ImageTransform: TransformType {
         guard let value = value as? [[String: AnyObject]], value.count != 0 else {
             return nil
         }
-        print("PRUBA Image \(value.first!)")
-        print("PRUBA Thumbnail \(value.last!)")
-        let imageDictionary = value.first!
-        let thumbnailDictionary = value.last!
+        let imageDictionary = value.last!
+        let thumbnailDictionary = value.first!
         let image = Image()
         image.imageURLString = imageDictionary["label"] as? String
         image.thumbnailURLString = thumbnailDictionary["label"] as? String

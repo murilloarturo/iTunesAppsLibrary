@@ -13,6 +13,8 @@ enum LocalizableString : String {
     //MARK: - General
     case error = "Error"
     case ok = "Ok"
+    case offlineMessageTitle = "You are offline"
+    case offlineMessage = "Information stored on the device is showing"
     
     //MARK: - Applications
     case all = "All"
