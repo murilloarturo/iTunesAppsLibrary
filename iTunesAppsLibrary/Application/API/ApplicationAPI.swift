@@ -17,7 +17,7 @@ enum APIError: Error {
 
 struct ApplicationAPI {
     
-    static func load() -> Observable<Bool> {
+    static func load() -> Observable<[Application]> {
         return ApplicationServer.retrieveData()
     }
     
@@ -25,7 +25,7 @@ struct ApplicationAPI {
         return ApplicationStorage.retrieveCategories()
     }
     
-    static func retrieveApplications(forCategory categoryId: String) -> Observable<[Application]> {
+    static func retrieveApplications(forCategory categoryId: String?) -> Observable<[Application]> {
         return ApplicationStorage.retrieveApplications(forCategory: categoryId)
     }
 }

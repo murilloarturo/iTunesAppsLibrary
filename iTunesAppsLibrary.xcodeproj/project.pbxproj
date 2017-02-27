@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6ABB20334F59B5393C56EC63 /* Pods_iTunesAppsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */; };
+		A02C7C2A1E63BF7F00BBE94E /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02C7C291E63BF7F00BBE94E /* LocalizableString.swift */; };
 		A06655C91E62382A008D1BB0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655C81E62382A008D1BB0 /* Coordinator.swift */; };
 		A06655CB1E623841008D1BB0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */; };
 		A06655CD1E623884008D1BB0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */; };
@@ -24,14 +25,22 @@
 		A06655F61E6289A6008D1BB0 /* ApplicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */; };
 		A06655F71E6289A6008D1BB0 /* ApplicationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */; };
 		A06655F91E628A97008D1BB0 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */; };
+		A06655FC1E638A3F008D1BB0 /* ApplicationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655FA1E638A3E008D1BB0 /* ApplicationCollectionViewCell.swift */; };
+		A06655FD1E638A3F008D1BB0 /* ApplicationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06655FB1E638A3E008D1BB0 /* ApplicationCollectionViewCell.xib */; };
+		A06656001E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06655FF1E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift */; };
 		A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */; };
 		A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA891E6205C000DFB022 /* Assets.xcassets */; };
 		A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DFCA8B1E6205C000DFB022 /* LaunchScreen.storyboard */; };
+		A0FDD0AD1E639FC800BB4468 /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDD0AC1E639FC800BB4468 /* UIImageView+Networking.swift */; };
+		A0FDD0B01E63A0E300BB4468 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDD0AE1E63A0E300BB4468 /* CategoryCollectionViewCell.swift */; };
+		A0FDD0B11E63A0E300BB4468 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FDD0AF1E63A0E300BB4468 /* CategoryCollectionViewCell.xib */; };
+		A0FDD0B41E63BA1900BB4468 /* UIDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDD0B31E63BA1900BB4468 /* UIDevice+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		730159D4D0867BBFE3E5A07A /* Pods-iTunesAppsLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAppsLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		8A8F17EC94BEBA5324CBDBF1 /* Pods-iTunesAppsLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAppsLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesAppsLibrary/Pods-iTunesAppsLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		A02C7C291E63BF7F00BBE94E /* LocalizableString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		A06655C81E62382A008D1BB0 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A06655CA1E623841008D1BB0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		A06655CC1E623884008D1BB0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -48,11 +57,18 @@
 		A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationListViewController.swift; sourceTree = "<group>"; };
 		A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationListViewController.xib; sourceTree = "<group>"; };
 		A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
+		A06655FA1E638A3E008D1BB0 /* ApplicationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCollectionViewCell.swift; sourceTree = "<group>"; };
+		A06655FB1E638A3E008D1BB0 /* ApplicationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationCollectionViewCell.xib; sourceTree = "<group>"; };
+		A06655FF1E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Registrable.swift"; sourceTree = "<group>"; };
 		A0DFCA7C1E6205C000DFB022 /* iTunesAppsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesAppsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFCA7F1E6205C000DFB022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0DFCA891E6205C000DFB022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0DFCA8C1E6205C000DFB022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0DFCA8E1E6205C000DFB022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0FDD0AC1E639FC800BB4468 /* UIImageView+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Networking.swift"; sourceTree = "<group>"; };
+		A0FDD0AE1E63A0E300BB4468 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0FDD0AF1E63A0E300BB4468 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A0FDD0B31E63BA1900BB4468 /* UIDevice+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utils.swift"; sourceTree = "<group>"; };
 		EA53831F45FE7CC74A84C413 /* Pods_iTunesAppsLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAppsLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +92,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A02C7C281E63BF4600BBE94E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A02C7C291E63BF7F00BBE94E /* LocalizableString.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A06655C71E6237EE008D1BB0 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +115,10 @@
 			children = (
 				A06655F41E6289A6008D1BB0 /* ApplicationListViewController.swift */,
 				A06655F51E6289A6008D1BB0 /* ApplicationListViewController.xib */,
+				A06655FA1E638A3E008D1BB0 /* ApplicationCollectionViewCell.swift */,
+				A06655FB1E638A3E008D1BB0 /* ApplicationCollectionViewCell.xib */,
+				A0FDD0AE1E63A0E300BB4468 /* CategoryCollectionViewCell.swift */,
+				A0FDD0AF1E63A0E300BB4468 /* CategoryCollectionViewCell.xib */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -127,6 +155,16 @@
 				A06655F81E628A97008D1BB0 /* ApplicationViewModel.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		A06655FE1E638B5F008D1BB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A06655FF1E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift */,
+				A0FDD0AC1E639FC800BB4468 /* UIImageView+Networking.swift */,
+				A0FDD0B31E63BA1900BB4468 /* UIDevice+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A0DFCA731E6205C000DFB022 = {
@@ -221,6 +259,8 @@
 		A0DFCAA41E620E4100DFB022 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A02C7C281E63BF4600BBE94E /* Resources */,
+				A06655FE1E638B5F008D1BB0 /* Extensions */,
 				A06655D61E6242EE008D1BB0 /* CoreData */,
 			);
 			path = Utils;
@@ -305,8 +345,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DFCA8D1E6205C000DFB022 /* LaunchScreen.storyboard in Resources */,
+				A0FDD0B11E63A0E300BB4468 /* CategoryCollectionViewCell.xib in Resources */,
 				A0DFCA8A1E6205C000DFB022 /* Assets.xcassets in Resources */,
 				A06655F71E6289A6008D1BB0 /* ApplicationListViewController.xib in Resources */,
+				A06655FD1E638A3F008D1BB0 /* ApplicationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,18 +408,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06655CB1E623841008D1BB0 /* BaseCoordinator.swift in Sources */,
+				A0FDD0B41E63BA1900BB4468 /* UIDevice+Utils.swift in Sources */,
 				A06655C91E62382A008D1BB0 /* Coordinator.swift in Sources */,
 				A06655E21E625E66008D1BB0 /* Application.swift in Sources */,
+				A0FDD0AD1E639FC800BB4468 /* UIImageView+Networking.swift in Sources */,
 				A06655DE1E624594008D1BB0 /* Router.swift in Sources */,
+				A06655FC1E638A3F008D1BB0 /* ApplicationCollectionViewCell.swift in Sources */,
+				A02C7C2A1E63BF7F00BBE94E /* LocalizableString.swift in Sources */,
 				A0DFCA801E6205C000DFB022 /* AppDelegate.swift in Sources */,
 				A06655F61E6289A6008D1BB0 /* ApplicationListViewController.swift in Sources */,
 				A06655F21E628981008D1BB0 /* ApplicationListViewModel.swift in Sources */,
 				A06655E61E6261FC008D1BB0 /* Price.swift in Sources */,
+				A06656001E638BB4008D1BB0 /* UICollectionViewCell+Registrable.swift in Sources */,
 				A06655D81E624322008D1BB0 /* Storage.swift in Sources */,
 				A06655ED1E626CF6008D1BB0 /* ApplicationServer.swift in Sources */,
 				A06655EF1E62709B008D1BB0 /* ApplicationStorage.swift in Sources */,
 				A06655CD1E623884008D1BB0 /* ApplicationCoordinator.swift in Sources */,
 				A06655F91E628A97008D1BB0 /* ApplicationViewModel.swift in Sources */,
+				A0FDD0B01E63A0E300BB4468 /* CategoryCollectionViewCell.swift in Sources */,
 				A06655E81E62631C008D1BB0 /* Category.swift in Sources */,
 				A06655DA1E62447B008D1BB0 /* ApplicationAPI.swift in Sources */,
 				A06655E41E62618F008D1BB0 /* Image.swift in Sources */,

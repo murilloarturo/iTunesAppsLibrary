@@ -29,10 +29,14 @@ struct ApplicationStorage {
         })
     }
     
-    static func retrieveApplications(forCategory categoryId: String) -> Observable<[Application]> {
+    static func retrieveApplications(forCategory categoryId: String?) -> Observable<[Application]> {
         return Observable.create({ (observer) -> Disposable in
             let realm = try! Realm()
-            observer.onNext(Array(realm.objects(Application.self).filter("category.id == %@", categoryId)))
+            var data = realm.objects(Application.self)
+            if let categoryId = categoryId {
+                data = data.filter("category.id == %@", categoryId)
+            }
+            observer.onNext(Array(data))
             observer.onCompleted()
             
             return Disposables.create {}

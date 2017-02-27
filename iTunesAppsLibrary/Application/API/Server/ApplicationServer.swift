@@ -13,7 +13,7 @@ import RxSwift
 
 struct ApplicationServer {
     
-    static func retrieveData() -> Observable<Bool> {
+    static func retrieveData() -> Observable<[Application]> {
         return Observable.create { (observer) -> Disposable in
             
             let request = Alamofire.request(Router.categories).validate().responseArray(keyPath: "feed.entry") { (response: DataResponse<[Application]>) in
@@ -22,7 +22,7 @@ struct ApplicationServer {
                 case .success(let applications):
                     do {
                         try ApplicationStorage.save(applications: applications)
-                        observer.onNext(true)
+                        observer.onNext(applications)
                     } catch let error {
                         observer.onError(error)
                     }
