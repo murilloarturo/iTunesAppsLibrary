@@ -9,11 +9,15 @@
 import UIKit
 import RxSwift
 import SVProgressHUD
+import AZDropdownMenu
 
 protocol ApplicationListViewControllerCoordinator : class {
     
     func applicationListViewController(applicationListViewController viewController: ApplicationListViewController, didSelectApplicationViewModel viewModel: ApplicationViewModel)
 }
+
+let defaultNavigationBarHeight: CGFloat = 65.0
+let navigationBarPadding: CGFloat = 10.0
 
 class ApplicationListViewController: UIViewController {
 
@@ -26,7 +30,7 @@ class ApplicationListViewController: UIViewController {
     fileprivate var categories: [Category] = []
     fileprivate var applications: [Application] = []
     fileprivate let disposeBag = DisposeBag()
-    fileprivate var showCategories = true
+    fileprivate var menu: AZDropdownMenu?
     
     init(viewModel: ApplicationListViewModel) {
         self.viewModel = viewModel
@@ -52,11 +56,14 @@ class ApplicationListViewController: UIViewController {
         viewModel.loading.asObservable()
             .do(onNext: { [weak self] (loading) in
                 if (loading) {
+                    self?.showCollectionView(show: false)
                     SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
                     SVProgressHUD.show()
                 } else {
                     SVProgressHUD.dismiss()
+                    self?.setupMenuCategories()
                     self?.collectionView.reloadData()
+                    self?.showCollectionView(show: true)
                 }
             })
             .subscribe()
@@ -70,6 +77,12 @@ class ApplicationListViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     
+    fileprivate func showCollectionView(show: Bool) {
+        UIView.animate(withDuration: 0.4) {
+            self.collectionView.alpha = show ? 1.0 : 0.0
+        }
+    }
+    
     fileprivate func setupUI() {
         collectionView.registerCell(cell: CategoryCollectionViewCell.self)
         collectionView.registerCell(cell: ApplicationCollectionViewCell.self)
@@ -81,6 +94,32 @@ class ApplicationListViewController: UIViewController {
         layout.minimumLineSpacing = 0.0
         layout.minimumInteritemSpacing = 0.0
         collectionView.collectionViewLayout = layout
+        
+        let button = UIBarButtonItem(title: LocalizableString.categories.localizedString, style: .plain, target: self, action: #selector(showCategories))
+        navigationItem.rightBarButtonItem = button
+    }
+    
+    @objc fileprivate func showCategories() {
+        if (self.menu?.isDescendant(of: self.view) == true) {
+            self.menu?.hideMenu()
+        } else {
+            self.menu?.showMenuFromView(self.view)
+        }
+    }
+    
+    fileprivate func setupMenuCategories() {
+        guard self.menu == nil else {
+            return
+        }
+        
+        self.menu = AZDropdownMenu(titles: viewModel.allCategoriesName())
+        self.menu?.itemAlignment = .center
+        self.menu?.menuSeparatorStyle = .none
+        self.menu?.shouldDismissMenuOnDrag = true
+        self.menu?.itemFontColor = UIColor.blue
+        self.menu?.cellTapHandler = { [weak self] (indexPath: IndexPath) -> Void in
+            self?.viewModel.retrieveApplications(forCategoryAtIndex: indexPath.row)
+        }
     }
 
 }
@@ -111,7 +150,7 @@ extension ApplicationListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if UIDevice.isiPad() {
-            return CGSize(width: self.view.frame.width/3, height: self.view.frame.height/2)
+            return CGSize(width: self.view.frame.width/3, height: (self.view.frame.height/2))
         } else {
             return CGSize(width: self.view.frame.width/2, height: self.view.frame.height/3)
         }

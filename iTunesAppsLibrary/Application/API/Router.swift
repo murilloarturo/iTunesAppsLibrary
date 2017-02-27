@@ -29,7 +29,7 @@ enum Router: URLRequestConvertible {
         
         switch self {
         case .categories:
-            return "/topfreeapplications/limit=20/json"
+            return "/topfreeapplications/limit=40/json"
         }
     }
     

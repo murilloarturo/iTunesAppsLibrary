@@ -16,6 +16,7 @@ enum LocalizableString : String {
     
     //MARK: - Applications
     case all = "All"
+    case categories = "Categories"
     
     var localizedString: String {
         return NSLocalizedString(self.rawValue, comment: "")

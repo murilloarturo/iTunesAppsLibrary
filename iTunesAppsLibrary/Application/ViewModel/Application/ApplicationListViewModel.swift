@@ -37,8 +37,8 @@ class ApplicationListViewModel {
                 return ApplicationAPI.retrieveCategories()
             }
             .subscribe(onNext: { [weak self] (categories) in
-                self?.loading.value = false
                 self?.categories = categories
+                self?.loading.value = false
                 }, onError: { [weak self] (error) in
                 self?.loading.value = false
                     //show error
@@ -47,16 +47,17 @@ class ApplicationListViewModel {
     }
     
     //MARK: - Delegate
-    func retrieveApplications(forCategoryAtIndex index: Int?) {
+    func retrieveApplications(forCategoryAtIndex index: Int) {
+        loading.value = true
         var categoryId: String? = nil
         var title = LocalizableString.all.localizedString
-        if let index = index, index < categories.count {
-            let category = categories[index]
+        if index != 0, index < categories.count + 1 {
+            let category = categories[index-1]
             categoryId = category.id
             title = category.name
         }
-        loading.value = true
         ApplicationAPI.retrieveApplications(forCategory: categoryId)
+            .delay(0.5, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (applications) in
                 self?.title.value = title
                 self?.applications = applications
@@ -80,8 +81,13 @@ class ApplicationListViewModel {
         return (application.name, application.image?.thumbnailURLString)
     }
     
-    func categoryNameForCurrentCategory() -> String {
-        return currentCategory?.name ?? ""
+    func allCategoriesName() -> [String] {
+        var names: [String] = []
+        names.append(LocalizableString.all.localizedString)
+        for category in self.categories {
+            names.append(category.name)
+        }
+        return names
     }
     
     func categoryName(forIndexPath indexPath: IndexPath) -> String {

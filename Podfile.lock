@@ -5,6 +5,7 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - AZDropdownMenu (1.1.2)
   - ObjectMapper (2.2.4)
   - ObjectMapper+Realm (0.2):
     - ObjectMapper
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.3)
   - AlamofireImage (~> 3.1)
   - AlamofireObjectMapper
+  - AZDropdownMenu
   - ObjectMapper+Realm
   - RealmSwift
   - RxBlocking (~> 3.0)
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  AZDropdownMenu: 411c1b445fd29bb1e56b219131aaf294ba21b9b6
   ObjectMapper: 81d0e5d7c57129e3e93f29a04bdf9669542b37d2
   ObjectMapper+Realm: 8b45dbfa1be145e311a6f93a306c183d630b40a9
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
@@ -45,6 +48,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 77e9178258624cdf9e767a49cca62ca94520877e
+PODFILE CHECKSUM: 83f63c8eac2fb9019af0fa1f40ab1f09d09a12f7
 
 COCOAPODS: 1.2.0

@@ -26,6 +26,7 @@ class ApplicationCoordinator : Coordinator {
         let applicationListViewController = ApplicationListViewController(viewModel: viewModel)
         applicationListViewController.coordinator = self
         let navigationController = UINavigationController(rootViewController: applicationListViewController)
+        navigationController.navigationBar.isTranslucent = false
         
         rootViewController = navigationController
     }
