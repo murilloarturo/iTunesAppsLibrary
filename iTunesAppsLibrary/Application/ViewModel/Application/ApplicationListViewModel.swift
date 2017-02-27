@@ -21,29 +21,30 @@ class ApplicationListViewModel {
 
     //MARK: - Initializers
     init() {
+        loading.value = true
         retrieveCategories()
     }
     
     fileprivate func retrieveCategories() {
         loading.value = true
-        ApplicationAPI.load()
-            .catchError { (error) -> Observable<[Application]> in
-                //show error
-                return Observable.just([])
-            }
-            .flatMap { [weak self] (applications) -> Observable<[Category]> in
-                self?.applications = applications
-                self?.title.value = LocalizableString.all.localizedString
-                return ApplicationAPI.retrieveCategories()
-            }
+        ApplicationAPI.retrieveCategories()
             .subscribe(onNext: { [weak self] (categories) in
                 self?.categories = categories
-                self?.loading.value = false
+                self?.retrieveApplications(forCategoryAtIndex: 0)
                 }, onError: { [weak self] (error) in
                 self?.loading.value = false
                     //show error
             })
             .addDisposableTo(disposeBag)
+    }
+    
+    // MARK: - Public Method
+    func applicationViewModel(forIndexPath indexPath: IndexPath) -> ApplicationViewModel? {
+        guard indexPath.row < applications.count else {
+            return nil
+        }
+        let application = applications[indexPath.row]
+        return ApplicationViewModel(application: application)
     }
     
     //MARK: - Delegate

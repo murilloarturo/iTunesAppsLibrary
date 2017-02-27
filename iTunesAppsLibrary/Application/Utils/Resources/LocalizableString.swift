@@ -18,6 +18,8 @@ enum LocalizableString : String {
     case all = "All"
     case categories = "Categories"
     
+    case close = "Close"
+    
     var localizedString: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

@@ -21,6 +21,7 @@ PODS:
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
   - SVProgressHUD (2.0.3)
+  - TTZoomTransition (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SVProgressHUD
+  - TTZoomTransition
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -47,7 +49,8 @@ SPEC CHECKSUMS:
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TTZoomTransition: 4dc6a07eac1e4f2c3cd0010a1b43c06e5b107377
 
-PODFILE CHECKSUM: 83f63c8eac2fb9019af0fa1f40ab1f09d09a12f7
+PODFILE CHECKSUM: 773214ca88304f165723d445b4d94ef0c1865740
 
 COCOAPODS: 1.2.0

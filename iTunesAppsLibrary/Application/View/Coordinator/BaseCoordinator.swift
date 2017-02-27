@@ -11,8 +11,8 @@ import UIKit
 class BaseCoordinator: Coordinator {
     
     //MARK: - Properties
-    private var window: UIWindow
-    private var coordinators: CoordinatorsDictionary
+    fileprivate var window: UIWindow
+    fileprivate var coordinators: CoordinatorsDictionary
     
     var rootViewController: UIViewController {
         let coordinator = coordinators.popFirst()!.1
@@ -35,9 +35,19 @@ class BaseCoordinator: Coordinator {
     //MARK: - Utils
     private func showHome() {
         
+        let splashViewController = SplashViewController(viewModel: SplashViewModel())
+        splashViewController.coordinator = self
+        window.rootViewController = splashViewController
+    }
+}
+
+extension BaseCoordinator: SplashViewControllerCoordinator {
+    
+    func splashViewControllerDidFinish(splashViewController viewController: SplashViewController) {
+        
         let applicationCoordinator = ApplicationCoordinator()
         coordinators[applicationCoordinator.name] = applicationCoordinator
-        window.rootViewController = applicationCoordinator.rootViewController
+        window.rootViewController?.present(applicationCoordinator.rootViewController, animated: true)
         applicationCoordinator.start()
     }
 }

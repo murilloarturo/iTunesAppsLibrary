@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import TTZoomTransition
 
-class ApplicationCoordinator : Coordinator {
+class ApplicationCoordinator: NSObject, Coordinator {
     
     var rootViewController: UIViewController
     private var coordinators: [String: Coordinator]
@@ -17,18 +18,19 @@ class ApplicationCoordinator : Coordinator {
     }
     
     //MARK: - Initializers
-    init() {
-        
+    override init() {
         rootViewController = UINavigationController()
         coordinators = [:]
         
         let viewModel = ApplicationListViewModel()
         let applicationListViewController = ApplicationListViewController(viewModel: viewModel)
-        applicationListViewController.coordinator = self
         let navigationController = UINavigationController(rootViewController: applicationListViewController)
         navigationController.navigationBar.isTranslucent = false
         
         rootViewController = navigationController
+        
+        super.init()
+        applicationListViewController.coordinator = self
     }
     
     func start() {
@@ -41,6 +43,26 @@ extension ApplicationCoordinator: ApplicationListViewControllerCoordinator {
     
     func applicationListViewController(applicationListViewController viewController: ApplicationListViewController, didSelectApplicationViewModel viewModel: ApplicationViewModel) {
         
+        let applicationViewController = ApplicationViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: applicationViewController)
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.modalPresentationStyle = .custom
+        navigationController.transitioningDelegate = self
         
+        self.rootViewController.present(navigationController, animated: true, completion: nil)
+    }
+}
+
+extension ApplicationCoordinator: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let zoomTransition = TTZoomTranstition()
+        return zoomTransition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let zoomTransition = TTZoomTranstition()
+        zoomTransition?.isPresenting = false
+        return zoomTransition
     }
 }

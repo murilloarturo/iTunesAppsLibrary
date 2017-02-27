@@ -22,7 +22,7 @@ let navigationBarPadding: CGFloat = 10.0
 class ApplicationListViewController: UIViewController {
 
     //MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
     //MARK: - Properties
     weak var coordinator: ApplicationListViewControllerCoordinator?
@@ -57,6 +57,7 @@ class ApplicationListViewController: UIViewController {
             .do(onNext: { [weak self] (loading) in
                 if (loading) {
                     self?.showCollectionView(show: false)
+                    SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.native)
                     SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
                     SVProgressHUD.show()
                 } else {
@@ -78,13 +79,12 @@ class ApplicationListViewController: UIViewController {
     }
     
     fileprivate func showCollectionView(show: Bool) {
-        UIView.animate(withDuration: 0.4) {
+        UIView.animate(withDuration: 0.2) {
             self.collectionView.alpha = show ? 1.0 : 0.0
         }
     }
     
     fileprivate func setupUI() {
-        collectionView.registerCell(cell: CategoryCollectionViewCell.self)
         collectionView.registerCell(cell: ApplicationCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -117,6 +117,7 @@ class ApplicationListViewController: UIViewController {
         self.menu?.menuSeparatorStyle = .none
         self.menu?.shouldDismissMenuOnDrag = true
         self.menu?.itemFontColor = UIColor.blue
+        self.menu?.itemSelectionColor = UIColor.clear
         self.menu?.cellTapHandler = { [weak self] (indexPath: IndexPath) -> Void in
             self?.viewModel.retrieveApplications(forCategoryAtIndex: indexPath.row)
         }
@@ -150,7 +151,7 @@ extension ApplicationListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if UIDevice.isiPad() {
-            return CGSize(width: self.view.frame.width/3, height: (self.view.frame.height/2))
+            return CGSize(width: self.view.frame.width/5, height: (self.view.frame.height/3))
         } else {
             return CGSize(width: self.view.frame.width/2, height: self.view.frame.height/3)
         }
@@ -158,5 +159,13 @@ extension ApplicationListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
+        
+        guard let applicationViewModel = viewModel.applicationViewModel(forIndexPath: indexPath) else {
+            return
+        }
+        
+        coordinator?.applicationListViewController(applicationListViewController: self, didSelectApplicationViewModel: applicationViewModel)
     }
 }
+
+
